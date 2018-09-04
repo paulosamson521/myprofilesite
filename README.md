@@ -17,3 +17,11 @@ The website uses the following umbraco packages:<br/>
 uSync - https://www.nuget.org/packages/uSync <br/>
 LeBlender - https://www.nuget.org/packages/Lecoati.LeBlender/ <br/>
 Skybrud.Umbraco.GridData - https://www.nuget.org/packages/Skybrud.Umbraco.GridData/
+
+# Live site
+I hosted the site on UAAS so you can access it online.<br/>
+Link: https://pts-willing-chipmunk.s1.umbraco.io/<br/>
+Username: paulotestmail3@gmail.com<br/>
+Password: paulotestmail3<br/>
+(This is free trial, so the site will expire after 14 days.)
+
