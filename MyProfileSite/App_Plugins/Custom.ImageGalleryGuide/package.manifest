@@ -1,0 +1,28 @@
+﻿{   
+    propertyEditors: [      
+        {
+            alias: "Eb.ImageGalleryGuide",
+            name: "ImageGalleryGuide+",
+			isParameterEditor: true,
+			hideLabel: false,
+            editor: {
+                view: "~/App_Plugins/Custom.ImageGalleryGuide/ImageGalleryGuide.html",
+				valueType: "JSON"
+            },
+			prevalues: {
+				fields: [
+					{
+						label: "Image Paths",
+						description: "Enter image paths",
+						key: "imagePaths",
+						view: "multivalues"
+					}
+				]
+			}
+        }
+    ]
+    ,
+    javascript: [
+        '~/App_Plugins/Custom.ImageGalleryGuide/ImageGalleryGuide.controller.js',
+    ]
+}

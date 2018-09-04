@@ -1,0 +1,36 @@
+﻿@using MyProfileSite.Web.GridModels;
+@using MyProfileSite.Web.Infrastructure.Extensions
+@model AGridViewModel
+
+@if (Model != null && Model.Sections.Any())
+{
+    var items = Model.Sections[0].Rows.Select((row, index) => new { index, row });
+    foreach (var item in items)
+    {
+        @RenderRow(item.row);
+    }
+}
+
+
+
+@helper RenderRow(AGridRowViewModel row, bool noOffset = false)
+{
+    <section class="container">
+        <div class="row">
+            @{
+                var colsCount = row.Columns.Count;
+                foreach (var col in row.Columns)
+                {
+                    var size = 12 / colsCount;
+                    <article class="col-xs-12 col-md-@size">
+                        @foreach (var item in col.Items)
+                        {
+                            @Html.RenderGridItem(item);
+                        }
+                    </article>
+                }
+            }
+
+        </div>
+    </section>
+}

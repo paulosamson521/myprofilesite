@@ -1,0 +1,7 @@
+<div ng-controller="ProWorksInlineHtmlHelpLabelController" class="pw-inline-help-label">
+
+	<p data-ng-bind-html-unsafe="model.config.html"></p>
+
+	<a class="btn more-help-button" data-ng-show="model.config.dialog" data-ng-click="openDialog()" data-ng-bind="model.config.dialogbuttontext"></a>
+
+</div>

@@ -1,0 +1,10 @@
+.pw-inline-help-label .value {
+  margin: 0 0 5px 0;
+}
+.pw-inline-help-label .value label {
+  display: inline-block;
+  width: 55px;
+}
+.pw-inline-help-label .value input {
+  display: inline-block;
+}

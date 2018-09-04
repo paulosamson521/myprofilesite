@@ -1,0 +1,33 @@
+<div class="umb-overlay umb-overlay-right" data-ng-controller="ProWorksInlineHtmlHelpLabelDialogController">
+    <ng-form class="umb-overlay__form ng-pristine ng-valid" name="overlayForm">
+        <div class="umb-overlay-header">
+            <h4 data-ng-bind-html="dialogData.dialogtitle">More Help</h4>
+        </div>
+
+        <div class="umb-overlay-container form-horizontal">
+        
+            <div data-ng-bind-html-unsafe="dialogData.dialoghtml"></div>
+        
+        </div>
+
+        <div class="umb-overlay-drawer" >
+            <div class="umb-overlay-drawer__align-right">
+
+                <div class="btn-group umb-button" button-style="link" label="Close" type="button"> 
+                    <button type="button" class="btn umb-button__button btn-link" ng-click="close()">
+                        <span class="umb-button__content">
+                            <span><localize key="general_close">Close</localize></span>
+                        </span>
+                    </button>
+
+
+                </div>
+                <!--<a href data-ng-click="close()" class="btn btn-link">
+                    <localize key="general_close">Close</localize>
+                </a>-->
+            </div>
+        </div>
+    </ng-form>
+</div>
+
+

@@ -1,0 +1,32 @@
+﻿<div ng-controller="custom.imageBannerController">
+
+    <div class="usky-editor-placeholder" ng-click="setImage()" ng-if="control.value === null">
+        <i class="icon icon-picture"></i>
+        <div ng-id="!control.$inserted" class="help-text"><localize key="grid_clickToInsertImage">Click to insert image</localize></div>
+    </div>
+
+    <div ng-if="control.value">
+        <img ng-if="url"
+             ng-click="setImage()"
+             ng-src="{{url}}"
+             class="fullSizeImage" />
+
+        <div style="margin:20px">
+            <div>
+                <label>Title: </label>
+                <div>
+                    <input type="text" class="caption" ng-model="control.value.title" placeholder="Title" style="width: 265px;" />
+                </div>
+            </div>
+
+            <div style="margin-top:15px;">
+                <label>
+                    Subtitle:
+                </label>
+                <div>
+                    <input type="text" class="caption" ng-model="control.value.subtitle" placeholder="Subtitle" style="width: 265px;" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

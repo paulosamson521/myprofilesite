@@ -1,0 +1,20 @@
+﻿@inherits UmbracoViewPage<ISEO>
+@{
+    var ogTitle = !string.IsNullOrEmpty(Model.OgTitle) ? Model.OgTitle : Model.MetaTitle;
+    var ogDescription = !string.IsNullOrEmpty(Model.OpenGraphDescription) ? Model.OpenGraphDescription : Model.MetaDescription;
+    var index = Model.NoIndex ? "noindex" : "index";
+    var follow = Model.NoFollow ? "nofollow" : "follow";
+}
+
+<meta name="robots" content="@index, @follow" />
+<title>@Model.MetaTitle</title>
+<meta name="description" content="@Model.MetaDescription"/>
+<meta name="keywords" content="@Model.MetaKeywords" />
+<meta property="og:title" content="@ogTitle" />
+<meta property="og:url" content="@(Model.UrlWithDomain())" />
+<meta property="og:description" content="@ogDescription" />
+
+@if (Model.OgImage != null)
+{
+    <meta property="og:image" content="@Model.OgImage.Url" />
+}

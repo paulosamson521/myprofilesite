@@ -1,0 +1,54 @@
+{
+  "propertyEditors": [
+    {
+      "name": "HTML Inline Help Label",
+      "alias": "ProWorksInlineHtmlHelpLabel",
+      "editor": {
+        "valueType": "JSON",
+		"hideLabel": true,
+        "view": "~/App_Plugins/ProWorksInlineHtmlHelpLabel/views/proworksrichtextlabel.html"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "description": "HTML to display",
+            "key": "html",
+            "label": "HTML",
+            "view": "textarea"
+          },
+          {
+            "description": "Enable Dialog?",
+            "key": "dialog",
+            "label": "Enable Dialog?",
+            "view": "boolean"
+          },
+          {
+            "description": "Dialog Button Text",
+            "key": "dialogbuttontext",
+            "label": "Dialog Button Text",
+            "view": "textstring"
+          },
+          {
+            "description": "Dialog Title",
+            "key": "dialogtitle",
+            "label": "Dialog Title",
+            "view": "textstring"
+          },
+          {
+            "description": "Dialog HTML",
+            "key": "dialoghtml",
+            "label": "Dialog HTML",
+            "view": "textarea"
+          }
+        ]
+      }
+    }
+  ],
+  "css": [
+    "~/App_Plugins/ProWorksInlineHtmlHelpLabel/css/proworksrichtextlabel.css"
+  ],
+  "javascript": [
+    "~/App_Plugins/ProWorksInlineHtmlHelpLabel/js/proworksrichtextlabel.js"
+  ]
+}
+

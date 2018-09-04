@@ -1,0 +1,48 @@
+﻿@using MyProfileSite.Web.ViewModels.Pages;
+@inherits UmbracoViewPage<BasePageViewModel>
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="@Model.CurrentCulture.TwoLetterISOLanguageName">
+<head>
+    @Html.Raw(Model.ThirdPartyScripts.ScriptsAfterOpeningHeadTag)
+
+    @Html.Partial("SeoMeta")
+
+    <link href="/dist/css/styles.css" type="text/css" rel="stylesheet"/>
+
+    @Html.Raw(Model.ThirdPartyScripts.ScriptsBeforeClosingHeadTag)
+</head>
+<body>
+    @Html.Raw(Model.ThirdPartyScripts.ScriptsAfterOpeningBodyTag)
+
+    @Html.Partial("Header", Model.Header)
+
+
+    @RenderBody()
+
+
+    
+    <footer class="container">
+
+    </footer>
+
+
+    @Html.Raw(Model.ThirdPartyScripts.ScriptsBeforeClosingBodyTag)
+
+
+    <script type="text/javascript">
+        var images = document.getElementsByTagName("img");
+        var i;
+
+        for (i = 0; i < images.length; i++) {
+            images[i].className += " img-responsive";
+        }
+    </script>
+</body>
+</html>
+
+
+

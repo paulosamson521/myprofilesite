@@ -1,0 +1,154 @@
+@import '_variables.scss';
+
+.hero {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block; 
+    margin-bottom: 30px;
+    position: relative;
+    background-size:cover;
+
+    .nav-hero {
+        background-color: #337ab7;
+        color: #fff;
+        padding: 30px 40px;
+
+        h1{
+            line-height:30px;
+        }
+
+        span.subtitle{
+            font-size:18px;
+
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            height: 8px;
+            width: 245px;
+            background-color:#5bc0de;
+        }
+
+        ul {
+            margin-bottom: 20px;
+
+            li a {
+                color: #fff;
+
+                &::before {
+                    display: inline-block;
+                    content: ' ';
+                    background-position: left;
+                    height: 13px;
+                    width: 15px;
+                }
+            }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+            overflow: hidden;
+            word-break: break-all;
+            padding: 20px 0 20px 30px;
+
+            h1 {
+                font-size: 32px;
+                padding-right: 20px;
+                text-overflow: ellipsis;
+            }
+
+            &:after {
+                width: 165px;
+            }
+        }
+    }
+
+    .hero-banner {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 80px;
+    }
+}
+
+
+
+
+
+
+header {
+    height: 80px;
+    border-bottom: $gray-lighter solid 1px;
+    padding-top:50px;
+    &.container {
+        width: 100%;
+        max-width: 1160px;
+    }
+
+    .logo{
+        position:relative;
+        
+        img{
+            height: 100px;
+        width:auto;
+        }
+    }
+
+    .row {
+        max-width: 1160px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .navbar-toggle {
+        display: block;
+        padding: 0 0;
+        margin: 28px 10px 0 0;
+    }
+
+    .icon-bar {
+        height: 2px;
+        width: 22px;
+        margin-bottom: 6px;
+        background-color: $brand-primary;
+    }
+
+    &.affix {
+        position: fixed;
+        width: 100%;
+        background: #fff;
+        z-index: 10;
+        margin: 0 auto;
+        height: 58px;
+        top: 0;
+
+        .main-nav, .sub-menu {
+            display: none;
+        }
+    }
+
+    .main-nav { 
+        float:right;
+        ul{
+            display:flex;
+            list-style:none;
+            width:100%;
+            float:right;
+            li{
+                margin-right:60px;
+                font-size:16px;
+                a.current{
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+}
+
+

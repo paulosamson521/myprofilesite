@@ -1,0 +1,60 @@
+{
+    propertyEditors: [
+        {
+		alias: "Input.CharLimitEditor.WithStyledTextArea",
+		name: "Input Char limit with Styled Textarea (added styled textarea package)",
+		"hideLabel": false,
+      	"icon": "icon-stop-hand",
+      	"group": "Common",
+		editor: {
+		view: "~/App_Plugins/Input.CharLimitEditor.WithStyledTextArea/views/view.html"
+		},
+		prevalues: {
+			fields: [
+				{
+					label: "Number of Characters",
+					description: "Enter the max number of characters allowed",
+					key: "limit",
+					view: "requiredfield",
+					validation: [
+						{
+							type: "Required" 
+						}						
+					]
+				},
+				{
+					"description": "How many rows do you want your textarea to span",
+					"key": "rows",
+					"label": "Rows",
+					"view": "number"
+				  },
+				  {
+					"description": "Add classes here",
+					"key": "class",
+					"label": "Class",
+					"view": "textstring"
+				  },
+				  {
+					"description": "Add inline styles here",
+					"key": "style",
+					"label": "Style",
+					"view": "textarea"
+				  }
+			]
+		},
+		  "defaultConfig": {
+			"rows": 1,
+			"class": "",
+			"style": ""
+		  }
+
+    }
+    ]
+    ,
+    javascript: [
+        '~/App_Plugins/Input.CharLimitEditor.WithStyledTextArea/js/controller.js'
+    ],
+    css: [
+    "~/App_Plugins/Input.CharLimitEditor.WithStyledTextArea/css/style.css"
+  ]
+}

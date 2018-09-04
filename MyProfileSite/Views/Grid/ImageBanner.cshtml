@@ -1,0 +1,23 @@
+﻿@using MyProfileSite.Web.GridModels.GridItemValues
+@model ImageBannerGridItemValue
+
+<div class="hero" style="background-image: url(@Model.ImageUrl);">
+    @if (!string.IsNullOrEmpty(Model.Title))
+    {
+        <div class="hero-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="nav-hero">
+                            <h1>
+                                @Model.Title
+                                <br />
+                                <span class="subtitle">@Model.Subtitle</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

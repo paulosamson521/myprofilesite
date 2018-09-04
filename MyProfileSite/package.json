@@ -1,0 +1,16 @@
+{
+  "name": "MyProfileSite",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
